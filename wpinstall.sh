@@ -13,6 +13,6 @@ sudo chmod -R 775 /var/www/html/wordpress/ && sudo chown -R $USER:www-data /var/
 echo "Copying nginx config file for  wordpress from ${WPFILE} to /etc/nginx/sites/available"
 sudo cp $WPFILE /etc/nginx/sites-available/
 echo "Creating a symlink for '/etc/nginx/sites-available/wordpress.conf' at '/etc/nginx/sites-enabled/'"
-sudo ln -s /etc/nginx/sites-available/wordpress.conf /etc/nginx/sites-enabled/
+sudo ln -sf /etc/nginx/sites-available/wordpress.conf /etc/nginx/sites-enabled/
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo service nginx restart
