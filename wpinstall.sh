@@ -2,7 +2,7 @@
 
 sudo apt update -y
 WPFILE="${PWD}/wordpress.conf"
-sudo apt remove apache2
+sudo apt remove apache2 -y
 #sudo apt upgrade -y
 sudo apt install nginx php php-fpm php-curl php-mysql php-gd php-mbstring php-xml php-imagick php-zip php-xmlrpc mariadb-client -y
 sudo service nginx restart
