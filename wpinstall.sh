@@ -5,7 +5,7 @@ WPFILE="${PWD}/wordpress.conf"
 sudo apt remove apache2 -y
 #sudo apt upgrade -y
 sudo apt install nginx php php-fpm php-curl php-mysql php-gd php-mbstring php-xml php-imagick php-zip php-xmlrpc mariadb-server mariadb-client -y
-sudo mysql_secure_installation 
+# sudo mysql_secure_installation 
 sudo service nginx restart
 sudo service php8.1-fpm restart
 cd /var/www/html && sudo wget https://wordpress.org/latest.tar.gz && sudo tar -xf latest.tar.gz
